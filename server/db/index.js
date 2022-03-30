@@ -12,7 +12,7 @@ const Campus = require("./campus");
 // Puppy.belongsTo(Owner)
 
 Student.belongsTo(Campus);
-Campus.HasMany(Student);
+Campus.hasMany(Student);
 
 module.exports = {
   // Include your models in this exports object as well!
