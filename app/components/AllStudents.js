@@ -5,17 +5,33 @@ import { connect } from "react-redux";
 // (below) is not connected to Redux, while the default export (at the very
 // bottom) is connected to Redux. Our tests should cover _both_ cases.
 export class AllStudents extends React.Component {
+  componentDidMount() {
+    // this.props.fetchStudentsThunk();
+    console.log("this one is working too");
+  }
   render() {
-    return <div />;
+    return (
+      <div className="studentList">
+        {this.props.students.map((student) => (
+          <div key={student.id} className="student">
+            <h2>{student.firstName}</h2>
+          </div>
+        ))}
+      </div>
+    );
   }
 }
 
-const mapState = () => {
-  return {};
+const mapState = (reduxState) => {
+  return {
+    students: reduxState.students,
+  };
 };
 
-const mapDispatch = () => {
-  return {};
+const mapDispatch = (dispatch) => {
+  return {
+    fetchStudentsThunk: () => dispatch(fetchStudents()),
+  };
 };
 
 export default connect(mapState, mapDispatch)(AllStudents);

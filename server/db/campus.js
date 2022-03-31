@@ -4,9 +4,9 @@ const db = require("./database");
 module.exports = db.define("campus", {
   name: {
     type: Sequelize.STRING,
+    allowNull: false,
     validate: {
       notEmpty: true,
-      allowNull: false,
     },
   },
   imageUrl: {
@@ -17,16 +17,15 @@ module.exports = db.define("campus", {
   },
   address: {
     type: Sequelize.STRING,
+    allowNull: false,
     validate: {
       notEmpty: true,
-      allowNull: false,
     },
   },
   description: {
     type: Sequelize.TEXT,
     validate: {
       notEmpty: true,
-      allowNull: false,
     },
   },
 });

@@ -1,9 +1,23 @@
 const { green, red } = require("chalk");
-const { db } = require("./server/db");
+const { db, Student, Campus } = require("./server/db");
+
+const students = [
+  {
+    firstName: "Spencer",
+    lastName: "Hamilton",
+    email: "spencer@hamilton.com",
+    gpa: 4.0,
+  },
+];
 
 const seed = async () => {
   try {
     await db.sync({ force: true });
+    await Promise.all(
+      students.map((student) => {
+        return Student.create(student);
+      })
+    );
 
     // seed your database here!
   } catch (err) {
@@ -21,7 +35,7 @@ if (require.main === module) {
       console.log(green("Seeding success!"));
       db.close();
     })
-    .catch(err => {
+    .catch((err) => {
       console.error(red("Oh noes! Something went wrong!"));
       console.error(err);
       db.close();

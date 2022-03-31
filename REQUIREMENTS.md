@@ -8,8 +8,8 @@ The requirements below are broken into separate **tiers**, which model the way w
 
 #### Frontend
 
-- [ ] Write a component to display a list of all campuses (at least their names and images)
-- [ ] Write a component to display a list of all students (at least their names)
+- [x] Write a component to display a list of all campuses (at least their names and images)
+- [x] Write a component to display a list of all students (at least their names)
 - [ ] Write a campuses sub-reducer to manage campuses in your Redux store
 - [ ] Write a students sub-reducer to manage students in your Redux store
 - [ ] Display the all-campuses component when the url matches `/campuses`
@@ -18,8 +18,8 @@ The requirements below are broken into separate **tiers**, which model the way w
 
 #### Backend
 
-- [ ] Write a route to serve up all students
-- [ ] Write a route to serve up all campuses
+- [x] Write a route to serve up all students
+- [x] Write a route to serve up all campuses
 
 - Write a `campuses` model with the following information:
   - [x] name - not empty or null
@@ -36,7 +36,7 @@ The requirements below are broken into separate **tiers**, which model the way w
 
 #### Seed
 
-- [ ] Running the seed file creates campuses and students for demonstration purposes
+- [x] Running the seed file creates campuses and students for demonstration purposes
 
 Congrats! You have completed your first vertical slice! Make sure to `commit -m "Feature: Get All Campuses and Students"` before moving on (see RUBRIC.md - points are awarded/deducted for a proper git workflow)!
 
