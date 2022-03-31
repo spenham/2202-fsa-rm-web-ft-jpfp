@@ -9,9 +9,7 @@ const Routes = () => {
       <div>
         <nav>
           Welcome!
-          <Link to="/campuses" color="green">
-            Campuses
-          </Link>
+          <Link to="/campuses">Campuses</Link>
           <Link to="/students">Students</Link>
         </nav>
         <main>
