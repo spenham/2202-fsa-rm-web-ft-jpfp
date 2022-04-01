@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 import AllCampuses from "./AllCampuses";
 import AllStudents from "./AllStudents";
+import SingleCampus from "./SingleCampus";
+import SingleStudent from "./SingleStudent";
 
 const Routes = () => {
   return (
@@ -14,10 +16,11 @@ const Routes = () => {
         </nav>
         <main>
           <h1>Welcome to the Margaret Hamilton Academy of JavaScript!</h1>
-          <p>This seems like a nice place to get started with some Routes!</p>
           <Switch>
-            <Route path="/campuses" component={AllCampuses} />
-            <Route path="/students" component={AllStudents} />
+            <Route exact path="/campuses" component={AllCampuses} />
+            <Route exact path="/students" component={AllStudents} />
+            <Route path="/students/:id" component={SingleStudent} />
+            <Route path="/campuses/:id" component={SingleCampus} />
           </Switch>
         </main>
       </div>

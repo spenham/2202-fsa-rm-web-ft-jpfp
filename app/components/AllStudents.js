@@ -8,7 +8,6 @@ import { fetchStudents } from "../redux/students";
 export class AllStudents extends React.Component {
   componentDidMount() {
     this.props.fetchStudentsThunk();
-    console.log("this one is working too");
   }
   render() {
     return (

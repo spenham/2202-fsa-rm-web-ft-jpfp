@@ -1,12 +1,38 @@
 const { green, red } = require("chalk");
+const { AsyncDependenciesBlock } = require("webpack");
 const { db, Student, Campus } = require("./server/db");
 
 const students = [
   {
-    firstName: "Spencer",
-    lastName: "Hamilton",
-    email: "spencer@hamilton.com",
-    gpa: 4.0,
+    id: 1,
+    firstName: "Mae",
+    lastName: "Jemison",
+    email: "fake@fake.com",
+    gpa: 4,
+    imageUrl:
+      "https://historydaily.org/content/53493/70b7eaf7a2893e92cc0c0e21db096327.jpg",
+  },
+  {
+    id: 2,
+    firstName: "Sally",
+    lastName: "Ride",
+    email: "fake@fake.com",
+    gpa: 4,
+    imageUrl:
+      "https://historydaily.org/content/53493/5f087b38e047d55d362f5d9227111ea1.jpg",
+  },
+];
+
+const campuses = [
+  {
+    id: 1,
+    name: "Mars Academy",
+    address: "123 Fake Blvd",
+  },
+  {
+    id: 2,
+    name: "Jupiter Jumpstart",
+    address: "321 Fake St",
   },
 ];
 
@@ -16,6 +42,11 @@ const seed = async () => {
     await Promise.all(
       students.map((student) => {
         return Student.create(student);
+      })
+    );
+    await Promise.all(
+      campuses.map((campus) => {
+        return Campus.create(campus);
       })
     );
 

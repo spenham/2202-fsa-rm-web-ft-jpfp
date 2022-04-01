@@ -62,7 +62,7 @@ describe("Tier One: Campuses", () => {
     // our server yet.
     mockAxios.onGet("/api/campuses").replyOnce(200, campuses);
   });
-  describe.only("<AllCampuses /> component", () => {
+  describe("<AllCampuses /> component", () => {
     const getCampusesSpy = sinon.spy();
     afterEach(() => {
       getCampusesSpy.resetHistory();
@@ -70,7 +70,7 @@ describe("Tier One: Campuses", () => {
 
     // This test is interested in the unconnected AllCampuses component. It is
     // exported as a named export in app/components/AllCampuses.js
-    it("renders the campuses passed in as props", () => {
+    xit("renders the campuses passed in as props", () => {
       const wrapper = mount(
         <MemoryRouter>
           <UnconnectedAllCampuses
