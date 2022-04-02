@@ -9,9 +9,6 @@ export const setStudents = (students) => {
 export const fetchStudents = () => {
   return async (dispatch) => {
     const { data } = await Axios.get("/api/students");
-    // console.log("HERE: ", await Axios.get("/api/students"));
-    // let trial = data.filter((student) => student.id === 2);
-    // console.log("this right here: ", trial);
     dispatch(setStudents(data));
   };
 };

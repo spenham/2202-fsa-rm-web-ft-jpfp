@@ -1,35 +1,38 @@
 import React from "react";
 import { connect } from "react-redux";
-// import { fetchSingleCampus } from "../redux/singleCampus";
+import { fetchSingleCampus } from "../redux/singleCampus";
 
 export class SingleCampus extends React.Component {
   componentDidMount() {
-    this.props.fetchCampusesThunk();
+    try {
+      this.props.loadSingleCampus(this.props.match.params.id);
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   render() {
+    const campus = this.props.campus;
     return (
-      <div className="campusList">
-        {this.props.campuses.map((campus) => (
-          <div key={campus.id} className="campus">
-            <h2>{campus.name}</h2>
-            <img src={campus.imageUrl} />
-          </div>
-        ))}
+      <div>
+        <h1>{campus.name}</h1>
+        <h3>{campus.address}</h3>
+        <h4>{campus.description}</h4>
+        <img src={campus.imageUrl} />
       </div>
     );
   }
 }
 
-const mapState = (reduxState) => {
+const mapState = (state) => {
   return {
-    campuses: reduxState.campuses,
+    campus: state.campus,
   };
 };
 
 const mapDispatch = (dispatch) => {
   return {
-    fetchCampusesThunk: () => dispatch(fetchCampuses()),
+    loadSingleCampus: (id) => dispatch(fetchSingleCampus(id)),
   };
 };
 

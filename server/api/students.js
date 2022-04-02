@@ -14,7 +14,6 @@ router.get("/", async (req, res, next) => {
 //GET api/students/:studentId
 router.get("/:studentId", async (req, res, next) => {
   try {
-    console.log("NEW CONSOLE: ", req.params);
     const student = await Student.findByPk(req.params.studentId);
     res.json(student);
   } catch (error) {

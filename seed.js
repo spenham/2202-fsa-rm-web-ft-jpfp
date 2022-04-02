@@ -1,5 +1,4 @@
 const { green, red } = require("chalk");
-const { AsyncDependenciesBlock } = require("webpack");
 const { db, Student, Campus } = require("./server/db");
 
 const students = [
@@ -28,11 +27,13 @@ const campuses = [
     id: 1,
     name: "Mars Academy",
     address: "123 Fake Blvd",
+    description: "A great place to play and eat",
   },
   {
     id: 2,
     name: "Jupiter Jumpstart",
     address: "321 Fake St",
+    description: "Where a kid can be a kid",
   },
 ];
 

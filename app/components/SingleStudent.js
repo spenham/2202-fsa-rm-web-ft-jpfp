@@ -5,7 +5,6 @@ import { fetchSingleStudent } from "../redux/singleStudent";
 export class SingleStudent extends React.Component {
   componentDidMount() {
     try {
-      console.log("PARAMS: ", this.props.match.params);
       this.props.loadSingleStudent(this.props.match.params.id);
     } catch (error) {
       console.error(error);
@@ -14,8 +13,6 @@ export class SingleStudent extends React.Component {
 
   render() {
     const student = this.props.student;
-    console.log("WORKING HERE: ", this.props);
-    console.log("STUDENT", student);
     return (
       <div>
         <h1>
