@@ -20,6 +20,13 @@ export class SingleStudent extends React.Component {
         </h1>
         <h3>Email: {student.email}</h3>
         <h4>GPA: {student.gpa}</h4>
+        <p>
+          {/* ~~~~~~~~~~~~~~~~~~~~FIX THE BELOW WHEN YOU FIGURE OUT THE FOREIGN KEY~~~~~~~~~~~~~~~~~~~~ */}
+          {student.campus
+            ? "CAMPUS NAME HERE"
+            : "This student does not yet have a campus"}
+          {/* ~~~~~~~~~~~~~~~~~~~~FIX THE ABOVE WHEN YOU FIGURE OUT THE FOREIGN KEY~~~~~~~~~~~~~~~~~~~~ */}
+        </p>
         <img src={student.imageUrl} />
       </div>
     );

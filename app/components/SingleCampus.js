@@ -18,6 +18,15 @@ export class SingleCampus extends React.Component {
         <h1>{campus.name}</h1>
         <h3>{campus.address}</h3>
         <h4>{campus.description}</h4>
+        <p>
+          {/* ~~~~~~~~~~~~~~~~~~~~FIX THE BELOW WHEN YOU FIGURE OUT THE MAPPING~~~~~~~~~~~~~~~~~~~~ */}
+          {campus.students ? (
+            campus.map((students) => <li>students</li>)
+          ) : (
+            <li>This campus currently has no students</li>
+          )}
+          {/* ~~~~~~~~~~~~~~~~~~~~FIX THE ABOVE WHEN YOU FIGURE OUT THE MAPPING~~~~~~~~~~~~~~~~~~~~ */}
+        </p>
         <img src={campus.imageUrl} />
       </div>
     );
