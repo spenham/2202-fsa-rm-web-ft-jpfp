@@ -13,6 +13,7 @@ export class SingleCampus extends React.Component {
 
   render() {
     const campus = this.props.campus;
+    console.log(campus);
     return (
       <div>
         <h1>{campus.name}</h1>

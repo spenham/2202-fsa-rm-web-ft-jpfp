@@ -13,6 +13,7 @@ export class SingleStudent extends React.Component {
 
   render() {
     const student = this.props.student;
+    console.log("WORKING: ", this.props.student);
     return (
       <div>
         <h1>
@@ -22,8 +23,8 @@ export class SingleStudent extends React.Component {
         <h4>GPA: {student.gpa}</h4>
         <p>
           {/* ~~~~~~~~~~~~~~~~~~~~FIX THE BELOW WHEN YOU FIGURE OUT THE FOREIGN KEY~~~~~~~~~~~~~~~~~~~~ */}
-          {student.campus
-            ? "CAMPUS NAME HERE"
+          {student.campusId
+            ? student.campusId
             : "This student does not yet have a campus"}
           {/* ~~~~~~~~~~~~~~~~~~~~FIX THE ABOVE WHEN YOU FIGURE OUT THE FOREIGN KEY~~~~~~~~~~~~~~~~~~~~ */}
         </p>

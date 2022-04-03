@@ -4,6 +4,7 @@ import AllCampuses from "./AllCampuses";
 import AllStudents from "./AllStudents";
 import SingleCampus from "./SingleCampus";
 import SingleStudent from "./SingleStudent";
+import AddCampus from "./AddCampus";
 
 const Routes = () => {
   return (
@@ -13,6 +14,7 @@ const Routes = () => {
           Welcome!
           <Link to="/campuses">Campuses</Link>
           <Link to="/students">Students</Link>
+          {/* <Link to="/campuses/add">Add Campus</Link> */}
         </nav>
         <main>
           <h1>Welcome to the Margaret Hamilton Academy of JavaScript!</h1>
@@ -21,6 +23,7 @@ const Routes = () => {
             <Route exact path="/students" component={AllStudents} />
             <Route path="/students/:id" component={SingleStudent} />
             <Route path="/campuses/:id" component={SingleCampus} />
+            <Route path="/campuses" component={AddCampus} />
           </Switch>
         </main>
       </div>
