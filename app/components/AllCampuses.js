@@ -24,6 +24,7 @@ export class AllCampuses extends React.Component {
           </Link>
         ))}
         <div>
+          <h2>Add Campus:</h2>
           <AddCampus />
         </div>
       </div>

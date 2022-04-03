@@ -13,7 +13,7 @@ export class SingleStudent extends React.Component {
 
   render() {
     const student = this.props.student;
-    console.log("WORKING: ", this.props.student);
+    console.log("WORKING: ");
     return (
       <div>
         <h1>

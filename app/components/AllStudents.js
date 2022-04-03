@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { fetchStudents } from "../redux/students";
+import { AddStudent } from "./AddStudent";
 
 export class AllStudents extends React.Component {
   componentDidMount() {
@@ -23,6 +24,10 @@ export class AllStudents extends React.Component {
             </div>
           </Link>
         ))}
+        <div>
+          <h2>Add Student:</h2>
+          <AddStudent />
+        </div>
       </div>
     );
   }

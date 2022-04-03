@@ -30,7 +30,6 @@ export class AddCampus extends React.Component {
   render() {
     const { name, address, description } = this.state;
     const { handleSubmit, handleChange } = this;
-    console.log("testing", this);
 
     return (
       <form id="campus-form" onSubmit={handleSubmit}>

@@ -23,7 +23,6 @@ const Routes = () => {
             <Route exact path="/students" component={AllStudents} />
             <Route path="/students/:id" component={SingleStudent} />
             <Route path="/campuses/:id" component={SingleCampus} />
-            <Route path="/campuses" component={AddCampus} />
           </Switch>
         </main>
       </div>
