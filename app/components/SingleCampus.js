@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchSingleCampus } from "../redux/singleCampus";
+import UpdateCampus from "./UpdateCampus";
 
 export class SingleCampus extends React.Component {
   componentDidMount() {
@@ -13,7 +14,6 @@ export class SingleCampus extends React.Component {
 
   render() {
     const campus = this.props.campus;
-    // const student = this.props
     return (
       <div>
         <h1>{campus.name}</h1>
@@ -28,6 +28,10 @@ export class SingleCampus extends React.Component {
           )}
           {/* ~~~~~~~~~~~~~~~~~~~~FIX THE ABOVE WHEN YOU FIGURE OUT THE MAPPING~~~~~~~~~~~~~~~~~~~~ */}
         </p>
+        <div>
+          <h3>Update:</h3>
+          <UpdateCampus />
+        </div>
         <img src={campus.imageUrl} />
       </div>
     );

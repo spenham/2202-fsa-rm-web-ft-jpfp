@@ -5,6 +5,8 @@ import singleStudentReducer from "./singleStudent";
 import singleCampusReducer from "./singleCampus";
 import addCampusReducer from "./addCampus";
 import addStudentReducer from "./addStudent";
+import updateCampusReducer from "./updateCampus";
+import updateStudentReducer from "./updateStudent";
 
 const appReducer = combineReducers({
   campuses: campusesReducer,
@@ -13,6 +15,8 @@ const appReducer = combineReducers({
   campus: singleCampusReducer,
   addCampus: addCampusReducer,
   addStudent: addStudentReducer,
+  updateCampus: updateCampusReducer,
+  updateStudent: updateStudentReducer,
 });
 
 export default appReducer;

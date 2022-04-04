@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { fetchSingleStudent } from "../redux/singleStudent";
+import UpdateStudent from "./UpdateStudent";
 
 export class SingleStudent extends React.Component {
   componentDidMount() {
@@ -28,6 +29,8 @@ export class SingleStudent extends React.Component {
             : "This student does not yet have a campus"}
           {/* ~~~~~~~~~~~~~~~~~~~~FIX THE ABOVE WHEN YOU FIGURE OUT THE FOREIGN KEY~~~~~~~~~~~~~~~~~~~~ */}
         </p>
+        <div>Update:</div>
+        <UpdateStudent />
         <img src={student.imageUrl} />
       </div>
     );

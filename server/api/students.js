@@ -21,6 +21,25 @@ router.get("/:studentId", async (req, res, next) => {
   }
 });
 
+//POST api/students/
+router.post("/", async (req, res, next) => {
+  try {
+    res.status(201).send(await Student.create(req.body));
+  } catch (error) {
+    next(error);
+  }
+});
+
+// PUT /api/students/:studentId
+router.put("/:studentId", async (req, res, next) => {
+  try {
+    const student = await Student.findByPk(req.params.id);
+    res.send(await student.update(req.body));
+  } catch (error) {
+    next(error);
+  }
+});
+
 // DELETE /api/students/:studenId
 router.delete("/:studentId", async (req, res, next) => {
   try {

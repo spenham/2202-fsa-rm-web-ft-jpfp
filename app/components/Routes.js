@@ -4,7 +4,7 @@ import AllCampuses from "./AllCampuses";
 import AllStudents from "./AllStudents";
 import SingleCampus from "./SingleCampus";
 import SingleStudent from "./SingleStudent";
-import AddCampus from "./AddCampus";
+import NotFound from "./NotFound";
 
 const Routes = () => {
   return (
@@ -19,10 +19,12 @@ const Routes = () => {
         <main>
           <h1>Welcome to the Margaret Hamilton Academy of JavaScript!</h1>
           <Switch>
+            <Route exact path="/" component={AllCampuses} />
             <Route exact path="/campuses" component={AllCampuses} />
             <Route exact path="/students" component={AllStudents} />
             <Route path="/students/:id" component={SingleStudent} />
             <Route path="/campuses/:id" component={SingleCampus} />
+            <Route component={NotFound} />
           </Switch>
         </main>
       </div>
