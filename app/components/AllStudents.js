@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { fetchStudents } from "../redux/students";
 import { AddStudent } from "./AddStudent";
+import DeleteStudent from "./DeleteStudent";
 
 export class AllStudents extends React.Component {
   componentDidMount() {
@@ -15,14 +16,16 @@ export class AllStudents extends React.Component {
         <h1>
           <u>Student List</u>
         </h1>
+
         {this.props.students.map((student) => (
-          <Link to={`/students/${student.id}`} key={student.id}>
-            <div key={student.id} className="student">
+          <div key={student.id}>
+            <Link to={`/students/${student.id}`} key={student.id}>
               <h2>
                 {student.firstName} {student.lastName}
               </h2>
-            </div>
-          </Link>
+            </Link>
+            <DeleteStudent />
+          </div>
         ))}
         <div>
           <h2>Add Student:</h2>

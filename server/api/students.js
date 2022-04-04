@@ -21,4 +21,15 @@ router.get("/:studentId", async (req, res, next) => {
   }
 });
 
+// DELETE /api/students/:studenId
+router.delete("/:studentId", async (req, res, next) => {
+  try {
+    const student = await Student.findByPk(req.params.id);
+    await student.destroy();
+    res.send(student);
+  } catch (error) {
+    next(error);
+  }
+});
+
 module.exports = router;

@@ -10,7 +10,7 @@ export class DeleteCampus extends React.Component {
         <button
           type="button"
           className="remove"
-          onClick={console.log("TESTING", this.props.deleteCampus())}
+          onClick={() => this.props.deleteCampus(this.props.match.params.id)}
         >
           Delete (X)
         </button>
@@ -28,5 +28,3 @@ const mapDispatchToProps = (dispatch, { history }) => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DeleteCampus);
-
-// () => this.props.deleteCampus(this.props.match.params.id)

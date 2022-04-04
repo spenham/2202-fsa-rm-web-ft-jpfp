@@ -11,8 +11,8 @@ export const _deleteCampus = (campus) => {
 
 export const deleteCampus = (id, history) => {
   return async (dispatch) => {
-    const { data: todo } = await axios.delete(`/api/campuses/${id}`);
-    dispatch(_deleteCampus(todo));
+    const { data: campus } = await axios.delete(`/api/campuses/${id}`);
+    dispatch(_deleteCampus(campus));
     history.push("/");
   };
 };
