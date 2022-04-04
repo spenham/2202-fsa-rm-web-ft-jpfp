@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { fetchCampuses } from "../redux/campuses";
 import { AddCampus } from "./AddCampus";
+import { DeleteCampus } from "./DeleteCampus";
 
 export class AllCampuses extends React.Component {
   componentDidMount() {
@@ -15,13 +16,17 @@ export class AllCampuses extends React.Component {
         <h1>
           <u>Campus List</u>
         </h1>
+
         {this.props.campuses.map((campus) => (
-          <Link to={`/campuses/${campus.id}`} key={campus.id}>
-            <div className="campus">
-              <h2>{campus.name}</h2>
-              <img src={campus.imageUrl} />
-            </div>
-          </Link>
+          <div key={campus.id}>
+            <Link to={`/campuses/${campus.id}`} key={campus.id}>
+              <div className="campus">
+                <h2>{campus.name}</h2>
+                <img src={campus.imageUrl} />
+              </div>
+            </Link>
+            <DeleteCampus />
+          </div>
         ))}
         <div>
           <h2>Add Campus:</h2>

@@ -14,8 +14,6 @@ export class SingleCampus extends React.Component {
   render() {
     const campus = this.props.campus;
     // const student = this.props
-    console.log("working here", this);
-    // console.log(campus);
     return (
       <div>
         <h1>{campus.name}</h1>
