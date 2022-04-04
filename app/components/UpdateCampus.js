@@ -68,14 +68,6 @@ class UpdateCampus extends Component {
 
           <button type="submit">Update</button>
         </form>
-        {/* <form onSubmit={(ev) => ev.preventDefault()}>
-          <button
-            className='update'
-            onClick={() => this.props.deleteTodo(this.props.match.params.id)}
-          >
-            Delete
-          </button>
-        </form> */}
       </div>
     );
   }

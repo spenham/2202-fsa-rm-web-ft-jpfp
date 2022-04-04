@@ -20,7 +20,7 @@ export const deleteCampus = (id, history) => {
 export default function deleteCampusReducer(state = {}, action) {
   switch (action.type) {
     case DELETE_CAMPUS:
-      return action.todo;
+      return action.campus;
     default:
       return state;
   }

@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-// import { Link } from "react-router-dom";
 import { deleteStudent } from "../redux/deleteStudent";
 
 export class DeleteStudent extends React.Component {
@@ -28,5 +27,3 @@ const mapDispatchToProps = (dispatch, { history }) => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DeleteStudent);
-
-// () => this.props.deleteCampus(this.props.match.params.id)

@@ -20,7 +20,7 @@ export const addCampus = (campus, history) => {
 export default function addCampusReducer(state = {}, action) {
   switch (action.type) {
     case ADD_CAMPUS:
-      return action.todo;
+      return action.campus;
     default:
       return state;
   }
